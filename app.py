@@ -36,7 +36,7 @@ st.markdown("<h1 class='centered-title'>Tank Monitor Feed</h1>", unsafe_allow_ht
 st.markdown("<h4 class='centered-title'>- Developed by Spectramat Engineering Team</h4>", unsafe_allow_html=True)
 
 #Establishing the connection with the datasheet
-conn = st.experimental_connection("gsheets", type=GSheetsConnection)
+conn = st.connection("gsheets", type=GSheetsConnection)
 
 #Reading of Data
 df_NickelStrike = conn.read(worksheet="NiStrike", usecols=list(range(5)), ttl=5)
